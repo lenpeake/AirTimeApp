@@ -1,0 +1,136 @@
+{
+  "appTitle": "AirTime",
+  "login": {
+    "title": "Iniciar sesión",
+    "emailPlaceholder": "Correo electrónico",
+    "passwordPlaceholder": "Contraseña",
+    "button": "Iniciar sesión",
+    "errorTitle": "Error de inicio",
+    "successTitle": "Inicio de sesión exitoso",
+    "welcomeBack": "Bienvenido de nuevo",
+    "unknownResponseTitle": "Inicio de sesión",
+    "unknownResponse": "Respuesta inesperada del servidor."
+  },
+  "signup": {
+    "title": "Crear nueva cuenta",
+    "button": "Crear cuenta",
+    "successTitle": "Registro exitoso",
+    "successMessage": "Consulta tu correo electrónico para confirmar.",
+    "errorTitle": "Error al registrarse"
+  },
+  "createAccount": {
+    "title": "Crear cuenta",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "preferredName": "Nombre preferido",
+    "zipcode": "Código postal",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "button": "Crear cuenta",
+    "backToLogin": "Volver al inicio de sesión",
+    "loading": "Listo para despegar...",
+    "signupError": "Error de registro",
+    "profileError": "Error del perfil",
+    "loginError": "Error al iniciar sesión"
+  },
+  "logout": {
+    "button": "Cerrar sesión",
+    "confirmTitle": "¿Estás seguro?",
+    "confirmMessage": "¿Deseas cerrar sesión en tu cuenta?",
+    "cancel": "Cancelar",
+    "confirm": "Cerrar sesión"
+  },
+  "optin": {
+    "title": "¡Ayuda a mejorar AirTime!",
+    "message": "¿Te gustaría informar tu tiempo de espera real después de seguridad?",
+    "notNow": "Ahora no",
+    "yes": "Sí"
+  },
+  "permissions": {
+    "title": "Permisos requeridos",
+    "message": "Activa las notificaciones y los servicios de ubicación para una mejor experiencia."
+  },
+  "details": {
+    "title": "En este momento",
+    "hourlyEstimates": "Tiempos estimados por hora",
+    "precheck": "¿TSA Pre✓ disponible?",
+    "scrollHint": "Desplázate para ver más horarios",
+    "available": "Disponible",
+    "notAvailable": "No disponible"
+  },
+  "input": {
+    "title": "Envía tu tiempo de espera real",
+    "label": "¿Cuántos minutos tomó realmente?",
+    "button": "Enviar",
+    "invalidTitle": "Entrada no válida",
+    "invalidMessage": "Por favor, introduce un número."
+  },
+  "error": {
+    "title": "Error",
+    "message": "Algo salió mal. Por favor, inténtalo de nuevo."
+  },
+  "thankyou": {
+    "message": "¡Gracias por mejorar AirTime!",
+    "sub": "Tu contribución ayuda a viajeros de todo el mundo.",
+    "button": "Volver al inicio",
+    "redirecting": "Redirigiendo en"
+  },
+  "landing": {
+    "title": "Conoce tu espera. Evita el estrés.",
+    "subtitle": "Tiempos de espera en seguridad en tiempo real en aeropuertos de todo el mundo. Con datos de usuarios, precisos y rápidos. Planea tu viaje al aeropuerto con confianza.",
+    "card1Title": "Tiempos de Espera en Vivo",
+    "card1Text": "Estimaciones de espera TSA al minuto, antes incluso de salir hacia el aeropuerto.",
+    "card2Title": "Reportes de Usuarios",
+    "card2Text": "Únete a una red global de viajeros compartiendo actualizaciones en tiempo real.",
+    "card3Title": "Notificaciones Inteligentes",
+    "card3Text": "Te avisaremos si la fila en tu aeropuerto aumenta—para que no te tome por sorpresa.",
+    "button": "Crear Cuenta Nueva",
+    "statusGuest": "Explora AirTime. Inicia sesión para desbloquear funciones."
+  },
+  "header": {
+    "logout": "Cerrar sesión",
+    "greeting": {
+      "morning": "Buenos días",
+      "afternoon": "Buenas tardes",
+      "evening": "Buenas noches"
+    }
+  },
+  "airportSelection": {
+    "title": "Elige tu aeropuerto",
+    "placeholder": "Busca tu aeropuerto",
+    "confirmButton": "Continuar",
+    "alertMessage": "Por favor, elige un aeropuerto de la lista.",
+    "fetchError": "No se pueden obtener tiempos de espera."
+  },
+  "comingSoon": {
+    "title": "Próximamente",
+    "subtitle": "Estamos dando los últimos toques. ¡Mantente atento!"
+  },
+  "profile": {
+    "title": "Tu perfil",
+    "email": "Correo electrónico",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "zipcode": "Código postal",
+    "preferredName": "Nombre preferido",
+    "placeholder": "Escribe tu nombre preferido",
+    "saveButton": "Guardar",
+    "savedMessage": "Gracias por actualizar tu nombre preferido",
+    "emailVerified": "✔ Correo verificado",
+    "emailNotVerified": "✖ Correo no verificado",
+    "resendVerification": "Reenviar verificación"
+  },
+  "footer": {
+    "home": "Inicio",
+    "airport": "Aeropuerto",
+    "profile": "Perfil",
+    "copyright": "© {{year}} AirTime. Todos los derechos reservados."
+  },
+  "welcome": {
+    "greeting": "Bienvenido de nuevo, {{name}}!"
+  },
+  "units": {
+    "minutes": "min"
+  },
+  "toggleLang": "English"
+}
