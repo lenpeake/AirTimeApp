@@ -1,11 +1,39 @@
-# Sample Snack app
+# ✈️ AirTime
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+> **Know Your Wait. Skip the Stress.**  
+> Real-time airport security wait times — powered by TSA data and global user reports.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+![Tests](https://github.com/lenpeake/AirTimeApp/actions/workflows/tests.yml/badge.svg)
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+---
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+## 📱 About the App
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+**AirTime** is a mobile application that helps travelers avoid long airport security lines by showing live TSA wait times and real-time crowd-sourced reports.
+
+- 🔴 Live TSA data
+- 🌍 User-submitted actual wait times
+- 🔔 Smart surge alerts
+- 🌐 Multi-language support (English & Spanish)
+- 🛫 Works for over 450+ airports globally
+
+Built with **React Native (Expo)** and backed by **Supabase** for user accounts and data storage.
+
+---
+
+## 📷 Screenshots
+
+<!-- You can add images here later -->
+> Coming Soon
+
+---
+
+## 🧪 Tests
+
+This repo uses [Jest](https://jestjs.io/) and [React Native Testing Library](https://testing-library.com/docs/react-native-testing-library/intro/) for component testing. Tests run automatically via GitHub Actions.
+
+To run tests locally:
+
+```bash
+npm install
+npm test
