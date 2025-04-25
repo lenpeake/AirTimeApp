@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-name: Run Lean Test Suite
-=======
 name: Run CI Tests and Lint
->>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
 
 on:
   push:
@@ -11,27 +7,9 @@ on:
     branches: [ main ]
 
 jobs:
-<<<<<<< HEAD
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
-
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Install Dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Run Tests
-        run: npm test
-=======
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -42,10 +20,10 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Run ESLint
-        run: npm run lint || true  # This will not fail the build, but logs lint warnings
+        run: npm run lint || true  # Won't fail the build, but logs lint warnings
 
       - name: Run Tests
         run: npm test
@@ -64,4 +42,3 @@ jobs:
           body: |
             The CI run for ${{ github.repository }} has failed.
             View details: ${{ github.run_url }}
->>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
