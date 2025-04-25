@@ -1,0 +1,137 @@
+{
+  "appTitle": "AirTime",
+  "login": {
+    "title": "Login",
+    "emailPlaceholder": "Email",
+    "passwordPlaceholder": "Password",
+    "button": "Login",
+    "errorTitle": "Login Error",
+    "successTitle": "Login Successful",
+    "welcomeBack": "Welcome Back",
+    "unknownResponseTitle": "Login",
+    "unknownResponse": "Unexpected response from server."
+  },
+  "signup": {
+    "title": "Create New Account",
+    "button": "Create Account",
+    "successTitle": "Sign Up Successful",
+    "successMessage": "Check your email for confirmation.",
+    "errorTitle": "Sign Up Error"
+  },
+  "createAccount": {
+    "title": "Create Account",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "preferredName": "Preferred Name",
+    "zipcode": "Zip Code",
+    "email": "Email",
+    "password": "Password",
+    "button": "Create Account",
+    "backToLogin": "Back to Login",
+    "loading": "Cleared for takeoff...",
+    "signupError": "Signup Error",
+    "profileError": "Profile Error",
+    "loginError": "Login Failed"
+  },
+  "logout": {
+    "button": "Logout",
+    "confirmTitle": "Are you sure?",
+    "confirmMessage": "Do you want to log out of your account?",
+    "cancel": "Cancel",
+    "confirm": "Logout"
+  },
+  "optin": {
+    "title": "Help Improve AirTime!",
+    "message": "Would you like to report your actual wait time after security?",
+    "notNow": "Not now",
+    "yes": "Yes"
+  },
+  "permissions": {
+    "title": "Permissions Required",
+    "message": "Please enable notifications and location services for optimal experience."
+  },
+  "details": {
+    "title": "Right Now",
+    "hourlyEstimates": "Estimated Wait by Hour",
+    "precheck": "TSA Pre✓ Available?",
+    "scrollHint": "Scroll for more times",
+    "available": "Available",
+    "notAvailable": "Not Available"
+  },
+  "input": {
+    "title": "Submit Your Actual Wait Time",
+    "label": "How many minutes did it actually take?",
+    "button": "Submit",
+    "invalidTitle": "Invalid input",
+    "invalidMessage": "Please enter a number.",
+    "lineTypeLabel": "Select Line Type"
+  },
+  "error": {
+    "title": "Error",
+    "message": "Something went wrong. Please try again."
+  },
+  "thankyou": {
+    "message": "Thank you for improving AirTime!",
+    "sub": "Your submission helps travelers all over the world.",
+    "button": "Return to Home",
+    "redirecting": "Redirecting in"
+  },
+  "landing": {
+    "title": "Know Your Wait. Skip the Stress.",
+    "subtitle": "Real-time security wait times at airports worldwide. Crowd-sourced, accurate, and fast. Plan your airport journey with confidence.",
+    "card1Title": "Live Wait Times",
+    "card1Text": "Up-to-the-minute TSA wait estimates before you even leave for the airport.",
+    "card2Title": "User Reports",
+    "card2Text": "Join a global network of travelers helping each other by sharing real-time updates.",
+    "card3Title": "Smart Notifications",
+    "card3Text": "We’ll alert you if your airport line is surging—so you’re never caught off guard.",
+    "button": "Create New Account",
+    "statusGuest": "Explore AirTime. Login to unlock features."
+  },
+  "header": {
+    "logout": "Logout",
+    "greeting": {
+      "morning": "Good Morning",
+      "afternoon": "Good Afternoon",
+      "evening": "Good Evening"
+    }
+  },
+  "airportSelection": {
+    "title": "Choose Your Airport",
+    "placeholder": "Search for your airport",
+    "confirmButton": "Continue",
+    "alertMessage": "Please choose an airport from the list.",
+    "fetchError": "Unable to retrieve wait times."
+  },
+  "comingSoon": {
+    "title": "Coming Soon",
+    "subtitle": "We're putting on the final touches. Stay tuned!"
+  },
+  "profile": {
+    "title": "Your Profile",
+    "email": "Email",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "zipcode": "Zip Code",
+    "preferredName": "Preferred Name",
+    "placeholder": "Enter your preferred name",
+    "saveButton": "Save",
+    "savedMessage": "Thank you for updating Preferred Name",
+    "emailVerified": "✔ Email Verified",
+    "emailNotVerified": "✖ Email Not Verified",
+    "resendVerification": "Resend Verification"
+  },
+  "footer": {
+    "home": "Home",
+    "airport": "Airport",
+    "profile": "Profile",
+    "copyright": "© {{year}} AirTime. All rights reserved."
+  },
+  "welcome": {
+    "greeting": "Welcome Back, {{name}}!"
+  },
+  "units": {
+    "minutes": "min"
+  },
+  "toggleLang": "Español"
+}
