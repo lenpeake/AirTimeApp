@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: Run Lean Test Suite
+=======
+name: Run CI Tests and Lint
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
 
 on:
   push:
@@ -7,6 +11,7 @@ on:
     branches: [ main ]
 
 jobs:
+<<<<<<< HEAD
   test:
     runs-on: ubuntu-latest
 
@@ -24,3 +29,39 @@ jobs:
 
       - name: Run Tests
         run: npm test
+=======
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint || true  # This will not fail the build, but logs lint warnings
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Send failure email alert
+        if: failure()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USER }}
+          password: ${{ secrets.EMAIL_PASS }}
+          subject: "🚨 AirTime App CI Failed"
+          to: AirTimeApp2025@gmail.com
+          from: AirTime CI <${{ secrets.EMAIL_USER }}>
+          body: |
+            The CI run for ${{ github.repository }} has failed.
+            View details: ${{ github.run_url }}
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f

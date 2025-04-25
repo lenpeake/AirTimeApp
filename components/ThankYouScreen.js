@@ -9,7 +9,11 @@ import {
   Image,
   Dimensions,
 } from 'react-native';
+<<<<<<< HEAD
 import { useNavigation, useRoute } from '@react-navigation/native';
+=======
+import { useNavigation, useRoute, CommonActions } from '@react-navigation/native';
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
 import LottieView from 'lottie-react-native';
 import { useTranslation } from 'react-i18next';
 
@@ -38,10 +42,27 @@ export default function ThankYouScreen() {
   };
 
   const returnHome = useCallback(() => {
+<<<<<<< HEAD
     navigation.reset({
       index: 0,
       routes: [{ name: 'LandingPage' }],
     });
+=======
+    navigation.dispatch(
+      CommonActions.reset({
+        index: 0,
+        routes: [
+          {
+            name: 'MainTabs',
+            state: {
+              index: 0,
+              routes: [{ name: 'LandingPage' }],
+            },
+          },
+        ],
+      })
+    );
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
   }, [navigation]);
 
   const pulse = useCallback(() => {

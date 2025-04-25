@@ -1,7 +1,12 @@
 {
   "expo": {
+<<<<<<< HEAD
     "name": "airtime_v2",
     "slug": "snack-b8afbbc3-a21b-4a91-9d10-9de77fa38f52",
+=======
+    "name": "airtime-v2",
+    "slug": "snack-de88589d-c19d-44b5-a37e-71693620f3b1",
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

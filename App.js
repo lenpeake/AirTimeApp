@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
 import './i18n-setup'; // Language support
 import React, { useEffect, useState } from 'react';
 import { View, ActivityIndicator } from 'react-native';
@@ -12,7 +15,10 @@ import * as Linking from 'expo-linking';
 import { AuthProvider } from './components/AuthContext';
 import { PreferredNameProvider } from './components/PreferredNameContext';
 import { WelcomeOverlayProvider } from './components/WelcomeOverlay';
+<<<<<<< HEAD
 import { WaitTimeReminderProvider } from './components/WaitTimeReminderProvider'; // ✅ Safe now
+=======
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
 
 import LandingPage from './components/LandingPage';
 import AirportSelectionPage from './components/AirportSelectionPage';
@@ -30,6 +36,10 @@ import { pollAllMonitoredAirports } from './utils/BackgroundPolling';
 const Stack = createStackNavigator();
 SplashScreen.preventAutoHideAsync();
 
+<<<<<<< HEAD
+=======
+// Deep Linking Config
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
 const linking = {
   prefixes: ['airtime://', 'https://getairtime.app'],
   config: {
@@ -85,6 +95,7 @@ export default function App() {
         <PreferredNameProvider>
           <WelcomeOverlayProvider>
             <NavigationContainer linking={linking}>
+<<<<<<< HEAD
               <WaitTimeReminderProvider>
                 <Stack.Navigator
                   screenOptions={{
@@ -104,6 +115,25 @@ export default function App() {
                   <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
                 </Stack.Navigator>
               </WaitTimeReminderProvider>
+=======
+              <Stack.Navigator
+                screenOptions={{
+                  headerShown: false,
+                  animation: 'fade',
+                }}
+              >
+                <Stack.Screen name="LandingPage" component={LandingPage} />
+                <Stack.Screen name="AirportSelectionPage" component={AirportSelectionPage} />
+                <Stack.Screen name="AirportWaitTimeScreen" component={AirportWaitTimeScreen} />
+                <Stack.Screen name="AirportDetails" component={AirportDetails} />
+                <Stack.Screen name="FutureSuggestionsScreen" component={FutureSuggestionsScreen} />
+                <Stack.Screen name="LoginPage" component={LoginPage} />
+                <Stack.Screen name="CreateNewAccount" component={CreateNewAccount} />
+                <Stack.Screen name="ActualWaitTimeInput" component={ActualWaitTimeInput} />
+                <Stack.Screen name="ThankYouScreen" component={ThankYouScreen} />
+                <Stack.Screen name="ProfileScreen" component={ProfileScreen} />
+              </Stack.Navigator>
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
             </NavigationContainer>
           </WelcomeOverlayProvider>
         </PreferredNameProvider>

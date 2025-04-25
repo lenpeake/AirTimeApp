@@ -6,17 +6,28 @@
     "passwordPlaceholder": "Contraseña",
     "button": "Iniciar sesión",
     "errorTitle": "Error de inicio",
+<<<<<<< HEAD
     "successTitle": "Inicio exitoso",
     "welcomeBack": "Bienvenido de nuevo",
     "unknownResponseTitle": "Inicio",
+=======
+    "successTitle": "Inicio de sesión exitoso",
+    "welcomeBack": "Bienvenido de nuevo",
+    "unknownResponseTitle": "Inicio de sesión",
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
     "unknownResponse": "Respuesta inesperada del servidor."
   },
   "signup": {
     "title": "Crear nueva cuenta",
     "button": "Crear cuenta",
     "successTitle": "Registro exitoso",
+<<<<<<< HEAD
     "successMessage": "Revisa tu correo para confirmar.",
     "errorTitle": "Error de registro"
+=======
+    "successMessage": "Consulta tu correo electrónico para confirmar.",
+    "errorTitle": "Error al registrarse"
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
   },
   "createAccount": {
     "title": "Crear cuenta",
@@ -27,26 +38,43 @@
     "email": "Correo electrónico",
     "password": "Contraseña",
     "button": "Crear cuenta",
+<<<<<<< HEAD
     "backToLogin": "Volver al inicio",
     "loading": "Listo para despegar...",
     "signupError": "Error al registrar",
     "profileError": "Error de perfil",
     "loginError": "Error de inicio"
+=======
+    "backToLogin": "Volver al inicio de sesión",
+    "loading": "Listo para despegar...",
+    "signupError": "Error de registro",
+    "profileError": "Error del perfil",
+    "loginError": "Error al iniciar sesión"
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
   },
   "logout": {
     "button": "Cerrar sesión",
     "confirmTitle": "¿Estás seguro?",
+<<<<<<< HEAD
     "confirmMessage": "¿Deseas cerrar sesión?",
+=======
+    "confirmMessage": "¿Deseas cerrar sesión en tu cuenta?",
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
     "cancel": "Cancelar",
     "confirm": "Cerrar sesión"
   },
   "optin": {
     "title": "¡Ayuda a mejorar AirTime!",
+<<<<<<< HEAD
     "message": "¿Te gustaría informar tu tiempo real de espera después de seguridad?",
+=======
+    "message": "¿Te gustaría informar tu tiempo de espera real después de seguridad?",
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
     "notNow": "Ahora no",
     "yes": "Sí"
   },
   "permissions": {
+<<<<<<< HEAD
     "title": "Se requieren permisos",
     "message": "Activa las notificaciones y la ubicación para una mejor experiencia."
   },
@@ -55,10 +83,21 @@
     "hourlyEstimates": "Estimado por hora",
     "precheck": "¿TSA Pre✓ disponible?",
     "scrollHint": "Desplázate para más horas",
+=======
+    "title": "Permisos requeridos",
+    "message": "Activa las notificaciones y los servicios de ubicación para una mejor experiencia."
+  },
+  "details": {
+    "title": "En este momento",
+    "hourlyEstimates": "Tiempos estimados por hora",
+    "precheck": "¿TSA Pre✓ disponible?",
+    "scrollHint": "Desplázate para ver más horarios",
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
     "available": "Disponible",
     "notAvailable": "No disponible"
   },
   "input": {
+<<<<<<< HEAD
     "title": "Ingresa tu tiempo real de espera",
     "label": "¿Cuántos minutos tomaron realmente?",
     "button": "Enviar",
@@ -73,11 +112,27 @@
   "thankyou": {
     "message": "¡Gracias por mejorar AirTime!",
     "sub": "Tu envío ayuda a viajeros de todo el mundo.",
+=======
+    "title": "Envía tu tiempo de espera real",
+    "label": "¿Cuántos minutos tomó realmente?",
+    "button": "Enviar",
+    "invalidTitle": "Entrada no válida",
+    "invalidMessage": "Por favor, introduce un número."
+  },
+  "error": {
+    "title": "Error",
+    "message": "Algo salió mal. Por favor, inténtalo de nuevo."
+  },
+  "thankyou": {
+    "message": "¡Gracias por mejorar AirTime!",
+    "sub": "Tu contribución ayuda a viajeros de todo el mundo.",
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
     "button": "Volver al inicio",
     "redirecting": "Redirigiendo en"
   },
   "landing": {
     "title": "Conoce tu espera. Evita el estrés.",
+<<<<<<< HEAD
     "subtitle": "Tiempos de espera en seguridad en tiempo real. Preciso, colaborativo y veloz.",
     "card1Title": "Tiempos en Vivo",
     "card1Text": "Estimaciones TSA minuto a minuto antes de llegar.",
@@ -87,6 +142,17 @@
     "card3Text": "Te alertamos si la fila crece repentinamente — sin sorpresas.",
     "button": "Crear Cuenta",
     "statusGuest": "Explora AirTime. Inicia sesión para más funciones."
+=======
+    "subtitle": "Tiempos de espera en seguridad en tiempo real en aeropuertos de todo el mundo. Con datos de usuarios, precisos y rápidos. Planea tu viaje al aeropuerto con confianza.",
+    "card1Title": "Tiempos de Espera en Vivo",
+    "card1Text": "Estimaciones de espera TSA al minuto, antes incluso de salir hacia el aeropuerto.",
+    "card2Title": "Reportes de Usuarios",
+    "card2Text": "Únete a una red global de viajeros compartiendo actualizaciones en tiempo real.",
+    "card3Title": "Notificaciones Inteligentes",
+    "card3Text": "Te avisaremos si la fila en tu aeropuerto aumenta—para que no te tome por sorpresa.",
+    "button": "Crear Cuenta Nueva",
+    "statusGuest": "Explora AirTime. Inicia sesión para desbloquear funciones."
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
   },
   "header": {
     "logout": "Cerrar sesión",
@@ -97,6 +163,7 @@
     }
   },
   "airportSelection": {
+<<<<<<< HEAD
     "title": "Selecciona tu aeropuerto",
     "placeholder": "Busca tu aeropuerto",
     "confirmButton": "Continuar",
@@ -106,6 +173,17 @@
   "comingSoon": {
     "title": "Próximamente",
     "subtitle": "Casi listo. ¡Muy pronto!"
+=======
+    "title": "Elige tu aeropuerto",
+    "placeholder": "Busca tu aeropuerto",
+    "confirmButton": "Continuar",
+    "alertMessage": "Por favor, elige un aeropuerto de la lista.",
+    "fetchError": "No se pueden obtener tiempos de espera."
+  },
+  "comingSoon": {
+    "title": "Próximamente",
+    "subtitle": "Estamos dando los últimos toques. ¡Mantente atento!"
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
   },
   "profile": {
     "title": "Tu perfil",
@@ -128,7 +206,11 @@
     "copyright": "© {{year}} AirTime. Todos los derechos reservados."
   },
   "welcome": {
+<<<<<<< HEAD
     "greeting": "¡Bienvenido de nuevo, {{name}}!"
+=======
+    "greeting": "Bienvenido de nuevo, {{name}}!"
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
   },
   "units": {
     "minutes": "min"

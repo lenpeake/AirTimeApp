@@ -57,7 +57,11 @@ export default function ActualWaitTimeInput() {
         deviceId,
         lineType // include selected line type
       );
+<<<<<<< HEAD
       navigation.navigate('ThankYouScreen');
+=======
+      navigation.navigate('ThankYou');
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
     } catch (error) {
       console.error(error);
       Alert.alert(t('error.title'), t('error.message'));
@@ -98,7 +102,11 @@ export default function ActualWaitTimeInput() {
                   style={styles.picker}
                 >
                   <Picker.Item label="Regular TSA Line" value="regular" />
+<<<<<<< HEAD
                   <Picker.Item label="TSA Pre✓" value="precheck" />
+=======
+                  <Picker.Item label="TSA PreCheck" value="precheck" />
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
                   <Picker.Item label="CLEAR" value="clear" />
                 </Picker>
               </View>

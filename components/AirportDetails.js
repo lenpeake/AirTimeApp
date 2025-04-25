@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
+=======
+import React from 'react';
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
 import {
   View,
   Text,
@@ -7,14 +11,19 @@ import {
   Image,
   Animated,
   Easing,
+<<<<<<< HEAD
   Dimensions,
   Alert,
   TouchableOpacity,
+=======
+  Dimensions
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
 } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { LinearGradient } from 'expo-linear-gradient';
 import { LineChart } from 'react-native-chart-kit';
 import ScreenWithHeaderFooter from '../components/ScreenWithHeaderFooter';
+<<<<<<< HEAD
 import { useWaitTimeReminder } from './WaitTimeReminderProvider';
 
 const screenWidth = Dimensions.get('window').width;
@@ -91,6 +100,22 @@ export default function AirportDetails({ route, navigation }) {
   const hourlyData = waitTimes.estimated_hourly_times?.map((slot) =>
     typeof slot.waittime === 'number' ? slot.waittime : 0
   ) || [];
+=======
+
+const screenWidth = Dimensions.get('window').width;
+
+export default function AirportDetails({ route, navigation }) {
+  const { airportCode, airportName, waitTimes } = route.params;
+  const { t } = useTranslation();
+
+  const hourlyLabels =
+    waitTimes.estimated_hourly_times?.map((slot) => slot.timeslot.split(' ')[0]) || [];
+
+  const hourlyData =
+    waitTimes.estimated_hourly_times?.map((slot) =>
+      typeof slot.waittime === 'number' ? slot.waittime : 0
+    ) || [];
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
 
   const pulse = new Animated.Value(1);
   Animated.loop(
@@ -112,6 +137,7 @@ export default function AirportDetails({ route, navigation }) {
 
   return (
     <ScreenWithHeaderFooter navigation={navigation}>
+<<<<<<< HEAD
       <ScrollView contentContainerStyle={{ paddingBottom: 60, flexGrow: 1 }} nestedScrollEnabled={true}>
         <View style={styles.headerAirportContainer}>
           <Text style={styles.headerAirport}>
@@ -215,6 +241,89 @@ export default function AirportDetails({ route, navigation }) {
           </View>
         )}
       </ScrollView>
+=======
+      <View style={styles.headerAirportContainer}>
+        <Text style={styles.headerAirport}>
+          {airportName} ({airportCode})
+        </Text>
+      </View>
+
+      <Animated.View style={[styles.cardHighlightLux, { transform: [{ scale: pulse }] }]}>
+        <LinearGradient
+          colors={['rgba(255,255,255,0.3)', 'rgba(255,255,255,0.15)']}
+          style={styles.gradientBox}
+        >
+          <View style={styles.clockRow}>
+            <Image
+              source={require('../assets/clock_premium.png')}
+              style={styles.clockIcon}
+              resizeMode="contain"
+            />
+            <Text style={styles.labelHighlight}>{t('details.title')}</Text>
+          </View>
+          <Text style={styles.valueHighlight}>
+            {waitTimes.rightnow_description || t('details.notAvailable')}
+          </Text>
+        </LinearGradient>
+      </Animated.View>
+
+      <View style={styles.cardTransparent}>
+        <Text style={styles.label}>{t('details.precheck')}</Text>
+        <Text style={styles.value}>
+          {waitTimes.precheck === 1
+            ? t('details.available')
+            : t('details.notAvailable')}
+        </Text>
+      </View>
+
+      <View style={styles.scrollableCard}>
+        <Text style={styles.label}>{t('details.hourlyEstimates')}</Text>
+        <Text style={styles.scrollHintTop}>{t('details.scrollHint')}</Text>
+        <ScrollView
+          style={styles.hourList}
+          showsVerticalScrollIndicator
+          persistentScrollbar
+          nestedScrollEnabled
+        >
+          {waitTimes.estimated_hourly_times?.map((slot, index) => (
+            <View key={index} style={styles.row}>
+              <Text style={styles.time}>{slot.timeslot}</Text>
+              <Text style={styles.wait}>
+                {typeof slot.waittime === 'number'
+                  ? `${slot.waittime.toFixed(1)} ${t('units.minutes')}`
+                  : t('details.notAvailable')}
+              </Text>
+            </View>
+          ))}
+        </ScrollView>
+      </View>
+
+      {hourlyData.length > 0 && (
+        <View style={styles.chartContainerTransparent}>
+          <Text style={styles.label}>{t('details.hourlyEstimates')}</Text>
+          <LineChart
+            data={{ labels: hourlyLabels, datasets: [{ data: hourlyData }] }}
+            width={screenWidth - 40}
+            height={220}
+            yAxisSuffix={` ${t('units.minutes')}`}
+            chartConfig={{
+              backgroundGradientFrom: '#f3f4f6',
+              backgroundGradientTo: '#e5e7eb',
+              decimalPlaces: 1,
+              color: (opacity = 1) => `rgba(31, 41, 55, ${opacity})`,
+              labelColor: (opacity = 1) => `rgba(107, 114, 128, ${opacity})`,
+              propsForDots: {
+                r: '3',
+                strokeWidth: '2',
+                stroke: '#2563eb',
+              },
+            }}
+            bezier
+            style={{ marginVertical: 16, borderRadius: 16 }}
+          />
+        </View>
+      )}
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
     </ScreenWithHeaderFooter>
   );
 }
@@ -234,7 +343,11 @@ const styles = StyleSheet.create({
   cardHighlightLux: {
     borderRadius: 20,
     overflow: 'hidden',
+<<<<<<< HEAD
     marginBottom: 8,
+=======
+    marginBottom: 24,
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
     elevation: 10,
   },
   gradientBox: {
@@ -266,6 +379,7 @@ const styles = StyleSheet.create({
     color: '#111827',
     textAlign: 'center',
   },
+<<<<<<< HEAD
   refreshArea: {
     alignItems: 'center',
     marginBottom: 20,
@@ -280,6 +394,13 @@ const styles = StyleSheet.create({
     fontSize: 12,
     color: '#6b7280',
     marginTop: 2,
+=======
+  cardTransparent: {
+    backgroundColor: 'rgba(255,255,255,0.6)',
+    borderRadius: 10,
+    padding: 16,
+    marginBottom: 16,
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
   },
   label: {
     fontFamily: 'PlayfairDisplay',
@@ -299,9 +420,13 @@ const styles = StyleSheet.create({
     maxHeight: 220,
     marginBottom: 20,
   },
+<<<<<<< HEAD
   hourList: {
     height: 160,
   },
+=======
+  hourList: { maxHeight: 160 },
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
   row: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -329,6 +454,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
     padding: 12,
   },
+<<<<<<< HEAD
   badgeRow: {
     flexDirection: 'row',
     justifyContent: 'space-around',
@@ -351,4 +477,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: 'Inter_18pt',
   },
+=======
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
 });

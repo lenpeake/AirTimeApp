@@ -1,38 +1,39 @@
-# Sample Snack app
+# ✈️ AirTime
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+> **Know Your Wait. Skip the Stress.**  
+> Real-time airport security wait times — powered by TSA data and global user reports.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+![Tests](https://github.com/lenpeake/AirTimeApp/actions/workflows/tests.yml/badge.svg)
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+---
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
+## 📱 About the App
 
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+**AirTime** is a mobile application that helps travelers avoid long airport security lines by showing live TSA wait times and real-time crowd-sourced reports.
 
-## ✅ Developer QA & Test Checklist
+- 🔴 Live TSA data
+- 🌍 User-submitted actual wait times
+- 🔔 Smart surge alerts
+- 🌐 Multi-language support (English & Spanish)
+- 🛫 Works for over 450+ airports globally
 
-Before every commit or pull request:
+Built with **React Native (Expo)** and backed by **Supabase** for user accounts and data storage.
 
-### 🧪 Run Lean Tests
+---
 
-Tests include:
-- [x] Supabase login/session logic
-- [x] Preferred name fetch + save
-- [x] Permissions logic (location, notifications)
-- [x] Notification flow safety
-- [x] Language switching
-- [x] Wait time submission validation
+## 📷 Screenshots
 
-### 🔍 Run Manual QA (5-minute flow)
-- [x] Login with real user
-- [x] Preferred name shows on landing
-- [x] Profile data displays properly
-- [x] Welcome modal appears after login
-- [x] Language toggle switches text
-- [x] Live TSA wait time loads
-- [x] No visible layout or rendering issues
+<!-- You can add images here later -->
+> Coming Soon
 
-### ☁️ CI Status
-GitHub Actions will auto-run the test suite on each push or PR to `main`.
+---
 
+## 🧪 Tests
+
+This repo uses [Jest](https://jestjs.io/) and [React Native Testing Library](https://testing-library.com/docs/react-native-testing-library/intro/) for component testing. Tests run automatically via GitHub Actions.
+
+To run tests locally:
+
+```bash
+npm install
+npm test

@@ -17,61 +17,110 @@ import { supabase } from './supabase';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useTranslation } from 'react-i18next';
 import { useNavigation } from '@react-navigation/native';
+<<<<<<< HEAD
 import { requestNotificationPermissionOnce } from '../utils/Notifications';
 import { requestPermissions } from '../utils/Permissions';
 import i18n from 'i18next';
+=======
+import { scheduleWaitNotification, requestNotificationPermissionOnce } from '../utils/Notifications';
+import { requestPermissions } from '../utils/Permissions';
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
 
 const { height } = Dimensions.get('window');
 
 export default function LoginPage() {
+<<<<<<< HEAD
   const navigation = useNavigation();
   const { t } = useTranslation();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+=======
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const { t } = useTranslation();
+  const i18n = require('i18next');
+  const navigation = useNavigation();
+
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
   const [showWelcomeModal, setShowWelcomeModal] = useState(false);
   const [preferredName, setPreferredName] = useState('Traveler');
 
   const handleLogin = async () => {
     try {
       const response = await supabase.auth.signInWithPassword({ email, password });
+<<<<<<< HEAD
 
       if (!response || !response.data) {
         Alert.alert('Login Failed', 'Unexpected response from Supabase.');
+=======
+      console.log('📦 RAW LOGIN RESPONSE:', response);
+
+      if (!response) {
+        Alert.alert("Response is undefined. Supabase didn't return anything.");
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
         return;
       }
 
       const { data, error } = response;
 
       if (error) {
+<<<<<<< HEAD
+=======
+        console.error('❌ Login Error:', error);
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
         Alert.alert('Login Failed', error.message);
         return;
       }
 
+<<<<<<< HEAD
       const user = data.user;
 
       if (!user) {
+=======
+      if (!data || !data.user) {
+        console.error('❌ Missing user in response:', data);
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
         Alert.alert('Login Failed', 'No user returned from Supabase.');
         return;
       }
 
+<<<<<<< HEAD
       const { data: profile, error: profileError } = await supabase
         .from('profiles')
         .select('preferred_name')
         .eq('id', user.id)
+=======
+      console.log('✅ Logged in as user:', data.user.email);
+
+      // Fetch preferred name from profile table
+      const { data: profile, error: profileError } = await supabase
+        .from('profiles')
+        .select('preferred_name')
+        .eq('id', data.user.id)
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
         .maybeSingle();
 
       const name = profile?.preferred_name || 'Traveler';
       setPreferredName(name);
       setShowWelcomeModal(true);
 
+<<<<<<< HEAD
+=======
+      // Auto-dismiss modal and continue after 5 seconds
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
       setTimeout(() => {
         setShowWelcomeModal(false);
         continuePostLoginFlow();
       }, 5000);
     } catch (err) {
+<<<<<<< HEAD
       Alert.alert('Error', 'Unexpected error occurred.');
       console.error(err);
+=======
+      console.error('💥 Unexpected login error:', err);
+      Alert.alert('Error', 'Unexpected error occurred.');
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
     }
   };
 
@@ -84,9 +133,48 @@ export default function LoginPage() {
     }
 
     await requestNotificationPermissionOnce();
+<<<<<<< HEAD
     navigation.navigate('LandingPage');
   };
 
+=======
+    await promptWaitTimeOptIn();
+
+    navigation.navigate('LandingPage');
+  };
+
+  const promptWaitTimeOptIn = async () => {
+    Alert.alert(
+      t('optin.title'),
+      t('optin.message'),
+      [
+        {
+          text: t('optin.notNow'),
+          onPress: () => AsyncStorage.setItem('waitTimeOptIn', 'false'),
+          style: 'cancel',
+        },
+        {
+          text: t('optin.yes'),
+          onPress: async () => {
+            await AsyncStorage.setItem('waitTimeOptIn', 'true');
+            const estimatedMinutes = 30;
+            const airportCode = 'JFK';
+            const deviceId = 'abc123-device-xyz';
+            const language = i18n.language;
+
+            await scheduleWaitNotification(estimatedMinutes, {
+              airportCode,
+              estimatedMinutes,
+              deviceId,
+              language,
+            });
+          },
+        },
+      ]
+    );
+  };
+
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
   return (
     <View style={styles.background}>
       <SafeAreaView style={styles.safeArea}>
@@ -135,6 +223,10 @@ export default function LoginPage() {
         </KeyboardAvoidingView>
       </SafeAreaView>
 
+<<<<<<< HEAD
+=======
+      {/* ✅ Welcome Modal */}
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
       <Modal visible={showWelcomeModal} transparent animationType="fade">
         <View style={styles.modalBackdrop}>
           <View style={styles.modalContent}>

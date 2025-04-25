@@ -63,8 +63,12 @@
     "label": "How many minutes did it actually take?",
     "button": "Submit",
     "invalidTitle": "Invalid input",
+<<<<<<< HEAD
     "invalidMessage": "Please enter a number.",
     "lineTypeLabel": "Select Line Type"
+=======
+    "invalidMessage": "Please enter a number."
+>>>>>>> 694cb3ef9322a5a6dfc6a290f12298295a3edd6f
   },
   "error": {
     "title": "Error",
